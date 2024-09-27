@@ -55,7 +55,7 @@ publishing {
             credentials {
                 //Fetch these details from the properties file or from Environment variables
                 username = "Alif2308"
-                password = "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"
+                password = "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"
             }
         }
     }
