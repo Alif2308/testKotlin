@@ -41,7 +41,6 @@ publishing {
                 groupId = "com.example"
                 artifactId = "testKotlin-debug"
                 version = "1.0.0"
-                artifact("$buildDir/outputs/aar/testKotlin-debug.aar")
             }
         }
     }
@@ -51,11 +50,11 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://github.com/Alif2308/testKotlin") // Github Package
+            url = uri("https://maven.pkg.github.com/Alif2308/testKotlin") // Github Package
             credentials {
                 //Fetch these details from the properties file or from Environment variables
-                username = "Alif2308"
-                password = "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"
+                username = project.findProperty("gpr.usr") as String? ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
             }
         }
     }
