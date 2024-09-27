@@ -53,8 +53,8 @@ publishing {
             url = uri("https://maven.pkg.github.com/Alif2308/testKotlin") // Github Package
             credentials {
                 //Fetch these details from the properties file or from Environment variables
-                username = project.findProperty("gpr.usr") as String? ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
+                username = project.findProperty("gpr.usr") as String
+                password = project.findProperty("gpr.key") as String
             }
         }
     }
